@@ -1,1 +1,4 @@
 <%= link_to "Log in via GitHub", github_login_path %>
+<% if current_user %>
+  <%= link_to "Log Out", logout_path %>
+<% end %>

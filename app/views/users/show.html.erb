@@ -1,0 +1,24 @@
+<div>
+  <img src="<%= current_user.avatar_url %>" alt=""></br>
+</div>
+<div>
+  Followers
+  <% @followers.each do |f| %>
+    <a href="https://www.github.com/<%= f %>"><%= f %></a></br>
+  <% end %>
+</div>
+<div>
+  Following
+  <% @following.each do |f| %>
+    <a href="https://www.github.com/<%= f %>"><%= f %></a></br>
+  <% end %>
+</div>
+Number of Starred repos - <%= @stars %></br>
+<div>
+  Repositories
+  <% @repositories.each do |r| %>
+    <a href="https://www.github.com/<%= current_user.username %>/<%= r %>"><%= r %></a></br>
+  <% end %>
+</div>
+Organizations <%= @organizations %></br>
+Feed <%= @feed %></br>
